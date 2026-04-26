@@ -6,3 +6,38 @@ body {
     line-height: 1.6;
     letter-spacing: -0.016em;
 }
+
+/* Error Notification */
+.error-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff3b30;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+    z-index: 1000;
+    max-width: 90%;
+    animation: slideDown 0.3s ease-out;
+    transition: opacity 0.3s ease;
+}
+
+.error-notification.hidden {
+    display: none;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
